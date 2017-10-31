@@ -47,5 +47,23 @@ public class WordPlay {
         System.out.println("ANS IS = "+result);
         
     }
+    
+    public String replaceVowels(String phrases, char ch ){
+        StringBuilder phrase = new StringBuilder(phrases);
+        for(int i =0; i<phrases.length(); i++){
+            char word = phrases.charAt(i);
+            boolean result = isVowel(word);
+            if(result == true){
+                phrase.setCharAt(i,ch);
+            }
+        }
+        return phrase.toString();    
+    } 
+     
+    public void testReplaceVowels(){
+    
+        String upgradedPhrase = replaceVowels("Hello world" , '*');
+        System.out.println(upgradedPhrase);
+    }
 
 }
