@@ -2,8 +2,8 @@
 /**
  * Write a description of CaesarCipher here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author VINEET VERMA
+ * @version 30 Oct 2017
  */
 public class CaesarCipher {
     
@@ -26,7 +26,7 @@ public class CaesarCipher {
         return encrypted.toString();
     }
     
-    public void testCaesarCipher(){
+    public void testEncrypt(){
         int key = 23;
         String encrypted = encrypt("FIRST LEGION ATTACK EAST FLANK !",key);
         System.out.println(encrypted);
