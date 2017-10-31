@@ -65,5 +65,29 @@ public class WordPlay {
         String upgradedPhrase = replaceVowels("Hello world" , '*');
         System.out.println(upgradedPhrase);
     }
+    
+    public String emphasize(String phrases, char ch){
+    
+         StringBuilder phrase = new StringBuilder(phrases);
+         for(int i =0; i<phrase.length(); i++){
+            char word = phrase.charAt(i);
+            if(word == ch){
+            
+                if(i%2==0){
+                    phrase.setCharAt(i,'*');
+                }
+                else{
+                    phrase.setCharAt(i,'+');
+                }
+            }
+         }
+         return phrase.toString();
+    }  
+    
+    public void testEmphasize(){
+    
+        String result = emphasize("Mary Bella Abracadabra", 'a');
+        System.out.println("EMPHASIZED RESULT IS = "+result);
+    }
 
 }
