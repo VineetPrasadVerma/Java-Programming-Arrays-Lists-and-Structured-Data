@@ -1,2 +1,6 @@
 #BlueJ class context
-numComments=0
+comment0.params=ch
+comment0.target=boolean\ isVowel(char)
+comment1.params=
+comment1.target=void\ tester()
+numComments=2
