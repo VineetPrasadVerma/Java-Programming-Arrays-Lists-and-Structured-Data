@@ -2,8 +2,8 @@
 /**
  * Write a description of WordPlay here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author VINEET VERMA
+ * @version 30 Oct 2017
  */
 public class WordPlay {
     public boolean isVowel(char ch){
