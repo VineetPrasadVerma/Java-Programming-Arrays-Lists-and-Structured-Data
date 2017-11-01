@@ -34,8 +34,8 @@ public class CaesarCipher {
     }
     
     public void testEncrypt(){
-        int key = 23;
-        String encrypted = encrypt("First Legion",key);
+        int key = 15;
+        String encrypted = encrypt("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",key);
         System.out.println(encrypted);
         String decrypted = encrypt(encrypted,26-key);
         System.out.println(decrypted);
@@ -57,44 +57,33 @@ public class CaesarCipher {
         String shiftedAlphabet1= alphabet.substring(key1)+alphabet.substring(0,key1);
         String shiftedAlphabet2= alphabet.substring(key2)+alphabet.substring(0,key2);
         for(int i=0;i<encrypted.length();i++){
-            if(i%2==0){
-                char currentChar= encrypted.charAt(i);
-                char currChar=Character.toUpperCase(currentChar);
-                int idx= alphabet.indexOf(currChar);
-                if(idx!= -1){
-                    char newChar= shiftedAlphabet1.charAt(idx);
-                    if(Character.isUpperCase(currentChar)==true){
-                        encrypted.setCharAt(i,newChar);
-                    }
-                    else{
-                        char smallChar = Character.toLowerCase(newChar);
-                        encrypted.setCharAt(i,smallChar);
-                    }
+            char newChar;
+            char currentChar= encrypted.charAt(i);
+            char currChar=Character.toUpperCase(currentChar);
+            int idx= alphabet.indexOf(currChar);
+            if(idx!= -1){
+                if(i%2==0){
+                    newChar= shiftedAlphabet1.charAt(idx);
                 }
-            }
-            else{
-                char currentChar= encrypted.charAt(i);
-                char currChar=Character.toUpperCase(currentChar);
-                int idx= alphabet.indexOf(currChar);
-                if(idx!= -1){
-                    char newChar= shiftedAlphabet2.charAt(idx);
-                    if(Character.isUpperCase(currentChar)==true){
-                        encrypted.setCharAt(i,newChar);
-                    }
-                    else{
-                        char smallChar = Character.toLowerCase(newChar);
-                        encrypted.setCharAt(i,smallChar);
-                    }
+                else{
+                    newChar= shiftedAlphabet2.charAt(idx);
+                }
+                if(Character.isUpperCase(currentChar)==true){
+                    encrypted.setCharAt(i,newChar);
+                }
+                else{
+                     char smallChar = Character.toLowerCase(newChar);
+                     encrypted.setCharAt(i,smallChar);
                 }
             }
         }
-        return encrypted.toString();
+        return encrypted.toString();    
     }
-    
+       
     public void testEncryptTwoKeys(){
-        int key1 =23;
-        int Key2= 17;
-        String encrypted = encryptTwoKeys("First Legion",key1,Key2);
+        int key1 =8;
+        int Key2= 21;
+        String encrypted = encryptTwoKeys("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",key1,Key2);
         System.out.println(encrypted);
     
     }
