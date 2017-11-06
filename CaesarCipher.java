@@ -81,9 +81,9 @@ public class CaesarCipher {
     }
        
     public void testEncryptTwoKeys(){
-        int key1 =8;
-        int Key2= 21;
-        String encrypted = encryptTwoKeys("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",key1,Key2);
+        int key1 =2;
+        int key2= 20;
+        String encrypted = encryptTwoKeys("Run like wild to beat the wind",key1,key2);
         System.out.println(encrypted);
     
     }
