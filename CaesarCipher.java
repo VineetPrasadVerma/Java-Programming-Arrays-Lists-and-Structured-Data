@@ -35,7 +35,7 @@ public class CaesarCipher {
     
     public void testEncrypt(){
         int key = 15;
-        String encrypted = encrypt("At noon be in the conference room with your hat on for a surprise party. YELL LOUD!",key);
+        String encrypted = encrypt("Can you imagine life WITHOUT the internet AND computers in your pocket?",key);
         System.out.println(encrypted);
         String decrypted = encrypt(encrypted,26-key);
         System.out.println(decrypted);
@@ -81,9 +81,9 @@ public class CaesarCipher {
     }
        
     public void testEncryptTwoKeys(){
-        int key1 =2;
-        int key2= 20;
-        String encrypted = encryptTwoKeys("Run like wild to beat the wind",key1,key2);
+        int key1 =21;
+        int key2= 8;
+        String encrypted = encryptTwoKeys("Can you imagine life WITHOUT the internet AND computers in your pocket?",key1,key2);
         System.out.println(encrypted);
     
     }

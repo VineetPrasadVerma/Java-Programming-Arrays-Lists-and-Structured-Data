@@ -87,6 +87,7 @@ public class BreakingCaesarCipher {
     public void testDecryptTwoKeys(){
         FileResource fr = new FileResource();
         String message = fr.asString();
+        //String message = "Aal uttx hm aal Qtct Fhljha pl Wbdl. Pvxvxlx!";
         String decrypted = decryptTwoKeys(message);
         System.out.println(decrypted);
     
